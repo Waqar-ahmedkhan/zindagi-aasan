@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Footer from '../_components/Footer';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ export default function ContactPage() {
     isComplaint: false,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -18,13 +19,15 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     setFormData({ name: '', email: '', message: '', isComplaint: false });
   };
 
   return (
+    <>
+ 
     <div className="min-h-screen bg-gradient-to-br from-orange-200 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
         <div className="flex flex-col md:flex-row">
@@ -129,6 +132,9 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      
     </div>
+      <Footer/>
+      </>
   );
 }

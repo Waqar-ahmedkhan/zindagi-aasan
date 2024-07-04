@@ -1,6 +1,7 @@
 "use client"
 import { Brush, Check, ChevronDown, ChevronUp, Package, Shirt, ShowerHead, Wrench, Zap } from 'lucide-react';
 import { useState } from 'react';
+import Footer from '../_components/Footer';
 
 const services = [
   { name: 'Painting', icon: Brush, description: 'Transform your space with our expert painting services.' },
@@ -70,6 +71,9 @@ const FeatureItem = ({ feature }) => {
 
 const AboutUs = () => {
   return (
+    <>
+
+
     <div className="min-h-screen bg-gradient-to-b from-orange-200 to-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
@@ -112,6 +116,10 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
+    
+    <Footer/>
+    </>
+
   );
 };
 
