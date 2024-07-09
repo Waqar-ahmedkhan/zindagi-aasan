@@ -1,11 +1,11 @@
 'use client';
 
-import { Broom, Droplet, Hammer, PaintBucket, Scissors, Thermometer, TreePine, Truck, Wrench, Zap } from 'lucide-react';
+import { Droplet, Hammer, PaintBucket, Scissors, Thermometer, TreePine, Truck, Wrench, Zap } from 'lucide-react';
+import Image from 'next/image';
 
-const IconComponents = {
+const IconComponents : any = {
   PaintBucket,
   Droplet,
-  Broom,
   Zap,
   Thermometer,
   Wrench,
@@ -15,12 +15,12 @@ const IconComponents = {
   Truck,
 };
 
-const ProjectCard = ({ title, iconName, description, imageUrl }) => {
+const ProjectCard = ({ title, iconName, description, imageUrl }:any) => {
   const Icon = IconComponents[iconName];
   return (
-    <div className="bg-gradient-to-b  rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+    <div className="bg-gradient-to-b rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
       <div className="relative h-56 overflow-hidden">
-        <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+        <Image src={imageUrl} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70" />
         <div className="absolute bottom-4 left-4 flex items-center">
           {Icon && <Icon className="w-8 h-8 text-orange-500 mr-2" />}
@@ -40,7 +40,7 @@ const ProjectsPage = () => {
       title: "Interior Painting",
       iconName: "PaintBucket",
       description: "Transform your indoor spaces with our expert color consultation and painting services.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Bathroom Remodeling",
@@ -48,7 +48,6 @@ const ProjectsPage = () => {
       description: "Complete bathroom renovations, from layout changes to fixture installations.",
       imageUrl: "/api/placeholder/800/600"
     },
-   
     {
       title: "Smart Home Installation",
       iconName: "Zap",
