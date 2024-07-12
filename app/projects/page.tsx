@@ -46,49 +46,49 @@ const ProjectsPage = () => {
       title: "Bathroom Remodeling",
       iconName: "Droplet",
       description: "Complete bathroom renovations, from layout changes to fixture installations.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Smart Home Installation",
       iconName: "Zap",
       description: "Integration of smart home devices, including lighting, security, and home automation systems.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "HVAC Maintenance",
       iconName: "Thermometer",
       description: "Regular servicing and repairs for heating, ventilation, and air conditioning systems.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Kitchen Renovation",
       iconName: "Wrench",
       description: "Full kitchen remodels, including cabinetry, countertops, and appliance installations.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Roof Repair & Replacement",
       iconName: "Hammer",
       description: "Comprehensive roofing services, from minor repairs to full roof replacements.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Landscaping Design",
       iconName: "TreePine",
       description: "Custom landscape design and installation, including hardscaping and plant selection.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Window Treatments",
       iconName: "Scissors",
       description: "Custom window treatments, including blinds, shades, and drapery installation.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     },
     {
       title: "Moving & Relocation",
       iconName: "Truck",
       description: "Professional packing, moving, and unpacking services for residential and commercial clients.",
-      imageUrl: "/api/placeholder/800/600"
+      imageUrl: ""
     }
   ];
 

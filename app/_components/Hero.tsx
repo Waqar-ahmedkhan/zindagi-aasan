@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { useState } from 'react';
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 export default function Hero() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,10 +18,10 @@ export default function Hero() {
     <>
      <Whatsapp/> 
    
-     <div className='flex  items-center gap-3 flex-col justify-center pt-14 pb-7 bg-gradient-to-b from-orange-200 to-white'>
+     <div className='flex  items-center gap-3 flex-col justify-center pt-24 pb-7 bg-gradient-to-b from-orange-200 to-orange-50'>
   
       <motion.h2 
-        className='font-bold text-4xl md:text-5xl lg:text-6xl text-center text-gray-800'
+        className='font-bold text-4xl md:text-6xl lg:text-6xl text-center text-gray-800'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ export default function Hero() {
       </motion.h2>
       
       <motion.h2 
-        className='text-xl text-gray-600 mt-4'
+        className='text-xl text-gray-600 mt-5'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
@@ -46,14 +46,14 @@ export default function Hero() {
       </motion.h2>
       
       <motion.div 
-        className='mt-8 flex gap-4 items-center'
+        className='mt-10 flex gap-10 items-center'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.5 }}
       >
         <Input 
           placeholder='Search for a service...'
-          className="rounded-full md:w-[350px] shadow-md focus:ring-2 focus:ring-orange-400 border-orange-200"
+          className="rounded-full md:w-[350px] p-5 shadow-md focus:ring-2 focus:ring-orange-400 border-orange-400"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSearch()}

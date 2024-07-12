@@ -16,7 +16,7 @@ function Whatsapp() {
             src="/whatsapp_logo.png"
             width={55}
             height={45}
-            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+            className="transition-transform duration-300 w-auto h-auto ease-in-out transform hover:scale-110"
           />
         </ReactWhatsapp>
       </div>
