@@ -3,13 +3,14 @@ import Image from "next/image";
 import { useEffect, useState } from 'react';
 
 const SkeletonLoader = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <>
     {[...Array(6)].map((_, index) => (
       <motion.div
         key={index}
         className="bg-white rounded-2xl shadow-lg overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.3, delay: index * 0.1 }}
       >
         <div className="p-8 flex flex-col items-center">
@@ -19,7 +20,7 @@ const SkeletonLoader = () => (
         </div>
       </motion.div>
     ))}
-  </div>
+  </>
 );
 
 const CategoryList = ({ categories }) => {
@@ -34,17 +35,17 @@ const CategoryList = ({ categories }) => {
     <div className="container mx-auto px-4 py-8 bg-gradient-to-br from-orange-100 to-orange-200">
       <h1 className="text-5xl font-bold mb-12 text-center text-orange-600 shadow-text">Our Services</h1>
       
-      <AnimatePresence>
-        {loading ? (
-          <SkeletonLoader />
-        ) : (
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {categories.map((category, index) => (
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <AnimatePresence mode="wait">
+          {loading ? (
+            <SkeletonLoader key="skeleton" />
+          ) : (
+            categories.map((category, index) => (
               <motion.div
                 key={category.id}
                 className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
@@ -52,6 +53,7 @@ const CategoryList = ({ categories }) => {
                 whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <div
@@ -92,10 +94,10 @@ const CategoryList = ({ categories }) => {
                 </div>
                 <div className="absolute inset-x-0 bottom-0 h-2 bg-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
               </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }
