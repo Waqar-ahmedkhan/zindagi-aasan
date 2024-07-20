@@ -10,7 +10,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from 'next/image';
-import Footer from './Footer';
 
 const testimonials = [
   {
@@ -76,7 +75,7 @@ const testimonials = [
 ];
 
 
-export default function TestimonialSlider() {
+export default function TestimonialSlider2() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {

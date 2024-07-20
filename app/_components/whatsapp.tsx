@@ -7,8 +7,8 @@ function Whatsapp() {
       <div className="whatsapp-button">
         <ReactWhatsapp 
           element="button"
-          number="1-212-736-5000" 
-          message="Hello World!!!"
+          number="03197752385" 
+          message="hi i need your services for my home issue can you help me in this ?!!!"
           className="flex items-center"
         >
           <Image

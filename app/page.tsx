@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import CategoryList from "./_components/CategoryList";
-import Footer from "./_components/Footer";
 import Hero from "./_components/Hero";
 import { getCategories } from "./_services/Globalapi";
 
@@ -28,9 +27,8 @@ export default function Home() {
 
   return (
     <div>
-      <Hero />
+      <Hero/>
       <CategoryList categories={categories} />
-      <Footer />
     </div>
   );
 }

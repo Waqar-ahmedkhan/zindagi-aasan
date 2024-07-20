@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
 
@@ -19,11 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
        <div className="bg-gradient-to-b from-orange-200 to-white">
-     <Header/>
-
+       <Header/>
         {children}
-
-       </div>
+        <Footer/>
+ </div>
         
         </body>
     </html>
