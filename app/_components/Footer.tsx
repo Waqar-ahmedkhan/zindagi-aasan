@@ -1,6 +1,6 @@
 'use client';
 
-import { Clock, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, ShieldCheck, Twitter } from 'lucide-react';
+import { Clock, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, ShieldCheck, Twitter, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
 const SocialIcon = ({ Icon, href, color }) => (
@@ -61,8 +61,9 @@ const Footer = () => {
             <div className="flex flex-wrap">
               <SocialIcon Icon={Facebook} href="#" color="bg-blue-600 text-white" />
               <SocialIcon Icon={Twitter} href="#" color="bg-sky-500 text-white" />
-              <SocialIcon Icon={Instagram} href="#" color="bg-pink-600 text-white" />
-              <SocialIcon Icon={Linkedin} href="#" color="bg-blue-700 text-white" />
+              <SocialIcon Icon={Instagram} href="https://www.instagram.com/invites/contact/?igsh=6vdv5x04fzk8&utm_content=usim66c" color="bg-pink-600 text-white" />
+              <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/zindagi-asaan-47a247312" color="bg-blue-700 text-white" />
+              <SocialIcon Icon={Youtube} href="https://youtube.com/@zindagiasaan4207?si=1HdOqRy3LyLZsgrRhttps://www.instagram.com/invites/contact/?igsh=6vdv5x04fzk8&utm_content=usim66chttps://www.linkedin.com/in/zindagi-asaan-47a247312https://www.facebook.com/profile.php?id=61560789834446&mibextid=ZbWKwL" color="bg-blue-700 text-white" />
             </div>
           </div>
 

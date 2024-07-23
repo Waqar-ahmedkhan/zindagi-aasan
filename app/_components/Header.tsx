@@ -30,12 +30,12 @@ function Header() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/" className="flex items-center space-x-2 group">
               <motion.div 
-                className="relative w-12 h-12 overflow-hidden rounded-full bg-gradient-to-b from-orange-100 to-white p-2 transition-transform group-hover:scale-110"
+                className="relative w-12 h-12 overflow-hidden rounded-md bg-gradient-to-b from-orange-100 to-white p-2 transition-transform group-hover:scale-110"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image src='/orange-327.svg' alt='Zindagi Asan logo' layout="fill" objectFit="contain" />
+                <Image src='/logo.jpeg' alt='Zindagi Asan logo' layout="fill" objectFit="" />
               </motion.div>
               <motion.span 
                 className="text-xl font-bold text-orange-500 group-hover:text-orange-600 transition-colors duration-300"
